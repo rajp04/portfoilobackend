@@ -2,6 +2,10 @@ const express = require('express');
 const router = express.Router();
 const user = require('../models/user')
 
+router.get('/',(req,res)=>{
+    res.send('Welcome')
+})
+
 router.post('/contact', async (req, res) => {
     
     const { name, email, message } = req.body;
